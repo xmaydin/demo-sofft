@@ -33,7 +33,7 @@
                 var myChart = new Chart(ctx, {
                     type: 'line',
                     data: {
-                        labels: {{ strip_tags($name) }},
+                        labels:  ["", "", "", "", "", "", ""],
                         datasets: [{
                             label: 'Salary',
                             data: {{ $data }},

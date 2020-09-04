@@ -15,6 +15,9 @@ class indexController extends Controller
         $data = DB::table('personnels')->take(7)->orderBy('created_at')->pluck('salary');
         $name = DB::table('personnels')->take(7)->orderBy('created_at')->pluck('name');
 
+        $name = str_replace('"', "", $name);
+        $name = str_replace("'", "", $name);
+
         $personel = Personnels::all();
         return view("admin.index", ['personel' => $personel, 'data' => $data, 'name' => $name]);
     }
@@ -84,7 +87,7 @@ class indexController extends Controller
     {
 
         $validate = Validator::make($request->except('_token'), [
-            'name' => 'required|unique:personnels',
+            'name' => 'required',
             'position' => 'required',
             'office' => 'required',
             'age' => 'required',
