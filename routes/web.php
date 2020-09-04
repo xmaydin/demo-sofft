@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('/', 'indexController@index')->name('index');
     Route::get('/addnew', 'indexController@addNew')->name('addnew');
+    Route::post('/addnew', 'indexController@store')->name('addnew.post');
+    Route::get('/{id}', 'indexController@delete')->name('delete');
+    Route::get('/edit/{id}', 'indexController@edit')->name('edit');
+    Route::post('/edit/{id}', 'indexController@update')->name('edit.post');
 });
 
 Route::get('/', function () {
