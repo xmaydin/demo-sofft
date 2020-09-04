@@ -1,0 +1,28 @@
+.navbar-header {
+    padding: .5rem 1rem;
+}
+
+.active {
+    border-bottom: 2px solid blue;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+    color: dodgerblue;
+}
+
+#secondRow {
+    background-color: #f8f8f8;
+    padding: .5rem 1rem;
+    margin-bottom: 30px;
+}
+
+#thirdRow {
+    padding: .5rem 1rem;
+    margin-bottom: 30px;
+
+}
+
+#fourthRow {
+    padding: .5rem 1rem;
+    margin-bottom: 80px;
+}
