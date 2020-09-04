@@ -36,7 +36,7 @@
                         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                         datasets: [{
                             label: '# of Votes',
-                            data: [3, 5, 7, 12, 8, 3],
+                            data: {{ $data }},
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
                                 'rgba(54, 162, 235, 0.2)',

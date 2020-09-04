@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Personnels;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
@@ -11,8 +12,10 @@ class indexController extends Controller
 {
     public function index()
     {
+        $data = DB::table('personnels')->take(6)->orderBy('created_at')->pluck('salary');
+        $data = DB::table('personnels')->take(6)->orderBy('created_at')->pluck('salary');
         $personel = Personnels::all();
-        return view("admin.index", ['personel' => $personel]);
+        return view("admin.index", ['personel' => $personel, 'data' => $data]);
     }
 
     public function addNew()
