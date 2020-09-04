@@ -12,10 +12,11 @@ class indexController extends Controller
 {
     public function index()
     {
-        $data = DB::table('personnels')->take(6)->orderBy('created_at')->pluck('salary');
-        $data = DB::table('personnels')->take(6)->orderBy('created_at')->pluck('salary');
+        $data = DB::table('personnels')->take(7)->orderBy('created_at')->pluck('salary');
+        $name = DB::table('personnels')->take(7)->orderBy('created_at')->pluck('name');
+
         $personel = Personnels::all();
-        return view("admin.index", ['personel' => $personel, 'data' => $data]);
+        return view("admin.index", ['personel' => $personel, 'data' => $data, 'name' => $name]);
     }
 
     public function addNew()

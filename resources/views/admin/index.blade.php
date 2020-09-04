@@ -33,9 +33,9 @@
                 var myChart = new Chart(ctx, {
                     type: 'line',
                     data: {
-                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        labels: {{ strip_tags($name) }},
                         datasets: [{
-                            label: '# of Votes',
+                            label: 'Salary',
                             data: {{ $data }},
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
@@ -53,7 +53,7 @@
                                 'rgba(153, 102, 255, 1)',
                                 'rgba(255, 159, 64, 1)'
                             ],
-                            borderWidth: 1
+                            borderWidth: 5
                         }]
                     }
                 });
@@ -139,7 +139,7 @@
                 <tbody>
 
                 <tr>
-                    <td>{{ $val['name'] }}</td>
+                    <td>ASDAS</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
                     <td>61</td>

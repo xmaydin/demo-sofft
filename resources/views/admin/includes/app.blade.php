@@ -28,13 +28,17 @@
     <script src=""></script>
     <title>Sofft Bilisim | Anasayfa</title>
 </head>
-<body>
-<div class="container">
+<body class="sofft">
+<div id="web-bg">
+      <img src="{{ asset('images') }}/bg_demo.jpg" alt="">
+</div>
+<div class="container homepage">
     @include('admin.includes.header')
     @yield('content')
-</div>
+
 
     @include('admin.includes.footer')
+</div>
 
 <script>
     $(document).ready(function () {
